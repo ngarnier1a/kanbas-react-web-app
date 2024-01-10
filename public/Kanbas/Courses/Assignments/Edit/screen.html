@@ -1,0 +1,110 @@
+<html>
+    <head></head>
+    <body>
+        <table>
+            <td valign="top">
+                <ul>
+                    <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
+                    <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
+                    <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+                    <li><a href="/Kanbas/Calendar/index.html">Calendar</a></li>
+                    <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
+                    <li><a href="/Kanbas/History/index.html">History</a></li>
+                    <li><a href="/Kanbas/Commons/index.html">Commons</a></li>
+                    <li><a href="/Kanbas/Help/index.html">Help</a></li>
+                </ul>
+            </td>
+            <td valign="top">
+                <ul>
+                    <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                    <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+                    <li><a href="/Kanbas/Courses/Piazza/index.html">Piazza</a></li>
+                    <li><a href="/Kanbas/Courses/Zoom Meetings/index.html">Zoom Meetings</a></li>
+                    <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                    <li><a href="/Kanbas/Courses/Quizzes/screen.html">Quizzes</a></li>
+                    <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                    <li><a href="/Kanbas/Courses/People/screen.html">People</a></li>
+                    <li><a href="/Kanbas/Courses/Panopto Video/index.html">Panopto Video</a></li>
+                    <li><a href="/Kanbas/Courses/Discussions/screen.html">Discussions</a></li>
+                    <li><a href="/Kanbas/Courses/Announcements/screen.html">Announcements</a></li>
+                    <li><a href="/Kanbas/Courses/Pages/screen.html">Pages</a></li>
+                    <li><a href="/Kanbas/Courses/Files/screen.html">Files</a></li>
+                    <li><a href="/Kanbas/Courses/Rubrics/screen.html">Rubrics</a></li>
+                    <li><a href="/Kanbas/Courses/Outcomes/screen.html">Outcomes</a></li>
+                    <li><a href="/Kanbas/Courses/Collaborations/screen.html">Collaborations</a></li>
+                    <li><a href="/Kanbas/Courses/Syllabus/screen.html">Syllabus</a></li>
+                    <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
+                </ul>
+            </td>
+            <td valign="top">
+                <select id="select-one-assignment-edit-type">
+                    <option selected value="assignment-edit-speed-grader">SpeedGrader</option>
+                </select>
+                <hr>
+                <h2>Assignment Name</h2>
+                <input id="text-fields-assignment-edit-name" type="text"
+                    value="A1 - ENV + HTML" placeholder="A1 - Placeholder">
+                <p><textarea
+                    placeholder="Description of A1 - Placeholder"
+                    title="assignment-description">This is the assignment description.
+                </textarea></p>
+                <label for="assignment-edit-points">Points</label><br>
+                <input id="assignment-edit-points" type="number" value="100" placeholder="100">
+                <p>
+                    <label for="assignment-edit-group">Assignment Group</label><br>
+                    <select id="assignment-edit-group">
+                        <option selected value="assignments">ASSIGNMENTS</option>
+                    </select>
+                </p><p>
+                    <label for="assignment-edit-display">Display Grade As</label><br>
+                    <select id="assignment-edit-display">
+                        <option selected value="percentage">Percentage</option>
+                    </select>
+                </p><p>
+                    <label for="assignment-edit-submission">Submission Type</label><br>
+                    <select id="assignment-edit-submission">
+                        <option selected value="online">Online</option>
+                    </select>
+                </p><p>
+                    <label for="assignment-edit-submission">Submission Type</label><br>
+                    <select id="assignment-edit-submission">
+                        <option selected value="online">Online</option>
+                    </select>
+                </p><p>
+                    Online Entry Options<br>
+                    <input type="checkbox" value="text"
+                        id="chkbox-text-entry"/>
+                    <label for="chkbox-text-entry">Text Entry</label><br>
+                    <input type="checkbox" value="url"
+                        id="chkbox-web-url"/>
+                    <label for="chkbox-web-url">Website URL</label><br>
+                    <input type="checkbox" value="media"
+                        id="chkbox-media"/>
+                    <label for="chkbox-media">Media Recordings</label><br>
+                    <input type="checkbox" value="annotation"
+                        id="chkbox-annotation"/>
+                    <label for="chkbox-annotation">Student Annotation</label><br>
+                    <input type="checkbox" value="file"
+                        id="chkbox-file"/>
+                    <label for="chkbox-file">File Uploads</label><br>
+                </p><p>
+                    Assign<br>
+                    <label for="assignment-edit-assign-to">Assign to</label><br>
+                    <input id="assignment-edit-assign-to" type="text" value="Everyone" placeholder="Everyone">
+                </p><p>
+                    <label for="assignment-edit-due-date">Due</label><br>
+                    <input id="assignment-edit-due-date" type="date" value="2021-01-01" placeholder="2021-01-01">
+                </p><p>
+                    <label for="assignment-edit-available-from">Available From</label><br>
+                    <input id="assignment-edit-available-from" type="date" value="2021-01-01" placeholder="2021-01-01">
+                </p><p>
+                    <label for="assignment-edit-until">Until</label><br>
+                    <input id="assignment-edit-until" type="date" value="2021-01-01" placeholder="2021-01-01">
+                </p><p>
+                    <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Cancel</button></a>
+                    <a href="/Kanbas/Courses/Assignments/screen.html"><button type="button">Save</button></a>
+                </p>
+            </td>
+        </table>
+    </body>
+</html>
