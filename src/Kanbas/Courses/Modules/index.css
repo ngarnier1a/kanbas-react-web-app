@@ -1,0 +1,69 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.wd-modules-btn {
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 0.75vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    min-width: 40px;
+    margin: 5px;
+    margin-left: 2px;
+    float: right;
+}
+
+.wd-modules-btn:hover {
+    background-color: rgba(212,30,46,255);
+    background-color: gray;
+}
+
+.wd-modules-btn-primary {
+    background-color: rgba(212,30,46,255);
+    color: white
+}
+
+.wd-modules-btn-primary:hover {
+    background-color: rgba(161, 22, 33, 255);
+}
+
+.wd-modules-btn-green {
+    background-color: rgb(156,192,151);
+    color: white
+}
+
+.wd-modules-btn-green:hover {
+    background-color: rgb(112, 151, 106);
+}
+
