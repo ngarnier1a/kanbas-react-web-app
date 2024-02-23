@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";
 import { FaTachometerAlt, FaRegUserCircle, FaBook, FaRegCalendarAlt, FaInbox, FaQuestionCircle, FaClock, FaFilm } from "react-icons/fa";
+
 function KanbasNavigation() {
   const links = [
     { label: "Account",   icon: <FaRegUserCircle className="fs-2" />  },
@@ -14,7 +15,7 @@ function KanbasNavigation() {
   ];
   const { pathname } = useLocation();
   return (
-    <ul className="wd-kanbas-navigation">
+    <ul className="wd-kanbas-navigation d-none d-sm-block">
     <li key={0} style={{fontSize: '40px', fontWeight: 'bolder'}}>
         <a href="http://northeastern.edu">N</a>
     </li>
