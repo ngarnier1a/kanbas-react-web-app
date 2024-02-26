@@ -12,7 +12,7 @@ function Labs() {
         <Link to="/Labs/a4">Assignment 4</Link>
         <Routes>
           <Route path="/a3/*" element={<Assignment3 />} />
-          <Route path="/a4" element={<Assignment4 />} />
+          <Route path="/a4/*" element={<Assignment4 />} />
         </Routes>
       </div>
     );
