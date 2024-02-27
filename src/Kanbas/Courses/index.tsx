@@ -1,4 +1,3 @@
-import { courses } from "../../Kanbas/Database";
 import { Link, Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import { HiMiniBars3 } from "react-icons/hi2";
 import CourseNavigation from "./Navigation";
@@ -10,10 +9,10 @@ import CourseStatusComponent from "./Status";
 
 
 
-function Courses() {
+function Courses({ courses } : any) {
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    const course = courses.find((course) => course._id === courseId);
+    const course = courses.find((course : any) => course._id === courseId);
     const pathToCourse = (courseId ? pathname.split(courseId)[0] : '');
     const coursePath = (courseId ? pathname.split(courseId)[1] : '').split('/');
     const breadCrumbItems = coursePath.map((path, index) => {
