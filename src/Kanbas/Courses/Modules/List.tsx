@@ -1,35 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
-import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
+import * as client from "./client";
 import {
   addModule,
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
 import { KanbasState } from "../../store";
 import { Dropdown } from "react-bootstrap";
 function ModuleList() {
   const { courseId } = useParams();
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+      .then((modules) => {
+        dispatch(setModules(modules))
+      }
+    );
+  }, [courseId]);
+  
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+  const handleDeleteModule = (moduleId: string) => {
+    client.deleteModule(moduleId).then((status) => {
+      console.log(`deleted ${moduleId}`)
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
   const moduleList = useSelector((state: KanbasState) => 
     state.modulesReducer.modules);
   const module = useSelector((state: KanbasState) => 
     state.modulesReducer.module);
   const dispatch = useDispatch();
-  const [selectedModule, setSelectedModule] = useState(moduleList[0]);
+  const [selectedModule, setSelectedModule] = useState({_id: '1'});
   return (
     <>
       <ul className="list-group wd-modules">
         <li className="list-group-item">
           <button className="btn-primary me-2 "
-            onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+            onClick={handleAddModule}>
             Add
           </button>
           <button className="me-2"
-            onClick={() => dispatch(updateModule(module))}>
+            onClick={handleUpdateModule}>
             Update
           </button>
           <input
@@ -67,7 +93,7 @@ function ModuleList() {
                       Edit
                     </Dropdown.Item>
                     <Dropdown.Item
-                      onClick={() => dispatch(deleteModule(module._id))}>
+                      onClick={() => handleDeleteModule(module._id)}>
                       Delete
                     </Dropdown.Item>
                   </Dropdown.Menu>
