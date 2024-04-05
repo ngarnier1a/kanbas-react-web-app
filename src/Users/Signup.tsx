@@ -17,12 +17,31 @@ export default function Signup() {
     <div>
       <h1>Signup</h1>
       {error && <div>{error}</div>}
-      <label>Username</label><br />
-      <input value={user.username} onChange={(e) => setUser({
-          ...user, username: e.target.value })} /><br /><br />
-          <label>Username</label><br />
-      <input value={user.password} onChange={(e) => setUser({
-          ...user, password: e.target.value })} /><br />
+      <label>Username</label>
+      <br />
+      <input
+        value={user.username}
+        onChange={(e) =>
+          setUser({
+            ...user,
+            username: e.target.value,
+          })
+        }
+      />
+      <br />
+      <br />
+      <label>Password</label>
+      <br />
+      <input
+        value={user.password}
+        onChange={(e) =>
+          setUser({
+            ...user,
+            password: e.target.value,
+          })
+        }
+      />
+      <br />
       <button onClick={signup}> Signup </button>
     </div>
   );
