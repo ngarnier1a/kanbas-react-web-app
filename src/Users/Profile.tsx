@@ -35,24 +35,28 @@ export default function Profile() {
             onChange={(e) =>
               setProfile({ ...profile, username: e.target.value })
             }
+            placeholder='username'
           />
           <input
             value={profile.password}
             onChange={(e) =>
               setProfile({ ...profile, password: e.target.value })
             }
+            placeholder='password'
           />
           <input
             value={profile.firstName}
             onChange={(e) =>
               setProfile({ ...profile, firstName: e.target.value })
             }
+            placeholder='first name'
           />
           <input
             value={profile.lastName}
             onChange={(e) =>
               setProfile({ ...profile, lastName: e.target.value })
             }
+            placeholder='last name'
           />
           <input
             value={profile.dob}
@@ -62,6 +66,7 @@ export default function Profile() {
           <input
             value={profile.email}
             onChange={(e) => setProfile({ ...profile, email: e.target.value })}
+            placeholder='email'
           />
           <select
             onChange={(e) => setProfile({ ...profile, role: e.target.value })}
